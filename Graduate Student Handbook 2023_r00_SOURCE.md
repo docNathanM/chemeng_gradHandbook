@@ -98,7 +98,7 @@ Students must take 21 hours of graded 500-/600- level coursework, plus 3 hours o
 
 Every candidate for a master’s degree must pass a final written or oral examination.
 
-##Doctor of Philosophy
+## Doctor of Philosophy
 
 ### Description
 
@@ -122,19 +122,19 @@ APPLICATION FEE: This application fee is **required**.
 
 ## Undergraduate Preparation
 
-Students admitted to the graduate programs in chemical engineering usually have undergraduate degrees in chemical engineering or a closely related field. Students with undergraduate degrees in the physical sciences (chemistry, physics, etc.) are also eligible, although they are usually required to complete several undergraduate courses to make up for deficiencies in certain areas before full admission. Prospective students in this situation may be accepted as qualifying students and should contact the Department to work out an individualized curriculum.
+Students admitted to the graduate programs in chemical engineering usually have undergraduate degrees in chemical engineering or a closely related field. For students with undergraduate degrees in the physical sciences (chemistry, physics, etc.), the admissions review process looks for strong performance in thermo-fluids, mathematics, physics, and chemistry. In some cases, the reveiw committee may recommend the applicant complete several undergraduate courses to make up for deficiencies in certain areas before full admission. Prospective students in this situation may be accepted as qualifying students and should contact the Department to work out an individualized curriculum.
 
 ## Admission Requirements
 
-- <u>GRE</u>: The GRE is **not required**. You are welcome to submit your GRE; however, the review committee will not base admissions decisions on the GRE.
-- <u>GPA</u>: Must have an undergraduate GPA of at least 3.0 on a 4.0 scale.
-- <u>RESUME **REQUIRED**</u>: The applicant must provide a CV or resume, including contact information of at least two professional references.
-- <u>INTEREST STATEMENT **REQUIRED**</u>: The application ***must provide a written statement of research interest and future goals***. These are reviewed with keen interest in a student’s research plan and prior academic preparation.
-- <u>ENGLISH LANGUAGE PROFICIENCY</u> (for international students): https://international.olemiss.edu/ https://international.olemiss.edu/english-language-proficiency-test-exemption-list/.
+- MINIMUM QUALIFICATIONS: A successful applicant will have a Batchelor degree in Chemical Engineering, Chemistry, Physics, or a closely related STEM field.
+- RESUME **REQUIRED**: The applicant must provide a CV or resume, including contact information of at least two professional references.
+- INTEREST STATEMENT **REQUIRED**: The application **must provide a written statement of research interests and future goals**. These are reviewed with a keen interest in a student’s research plan and prior academic preparation.
+- TRANSCRIPT **REQUIRED**: Applicants may submit unofficial transcripts for review by the committee. If admission is granted, the Graduate School will require official transcripts prior to enrollment.
+- GPA: Successful applicants typically have above 3.0 GPA on a 4.0 scale (US Academic), but all applications that meet the above minimum qualifications will be reviewed.
+- GRE: The GRE is **not required**. You are welcome to submit your GRE; however, the review committee will not base admission decisions on the GRE.
+- ENGLISH LANGUAGE PROFICIENCY (for international students): https://international.olemiss.edu/ https://international.olemiss.edu/english-language-proficiency-test-exemption-list/.
 
-Applications will be review by a faculty committee using the following rubric to assess the required application materials and the student's academic preparation and alignment with department research priorities.
-
-<img src="reviewRubric.png" alt="reviewRubric" style="zoom:50%;" />
+Applications will be reviewed by a faculty committee to assess the required application materials, the student’s academic preparation, and alignment of research interests with department research priorities.
 
 # Assistantships, Fellowships, & Scholarships
 
@@ -149,12 +149,13 @@ Application for a graduate assistantship/instructorship should be made directly 
 Students who are offered and accept a research assistantship (RA) position must work as a RA each semester with which they receive support. The RA position will consist of no more than 25 hours of assisting a faculty instructor on a funded research project. This research project may or may not be the primary doctoral research project in which a student is assessed for candidacy or degree completion.
 
 Prospective students should directly contact the faculty member whose focus area best matches the student's interests. Contact information is at https://chemical.olemiss.edu/about/faculty_staff.html.  Research focus areas are listed below:
-- Dr. Prager: Coatings, Interfacial Sciences, Soil Remediation
 - Dr. Lopez: Membranes, Ionic Liquid Composite Materials, Molecular Transport
-- Dr. Smith: Polymers, Biomaterials
 - Dr. Murray: Fluid/Acoustic Interactions, Gas-Solid Two-Phase Flows, Combustion/Turbulence Dynamics
-- Dr. Villacorta: Functional Nano-Composites, Advanced Material Processing
+- Dr. Nouranian: Multi-Functional Nanocomposites, Interfacial Science, Graphene
+- Dr. Prager: Coatings, Interfacial Sciences, Soil Remediation
 - Dr. Reinemann: Biophysics, Cytoskeleton Mechanics, Microscopy
+- Dr. Smith: Polymers, Biomaterials
+- Dr. Villacorta: Functional Nano-Composites, Advanced Material Processing
 - Dr. Werfel: Cancer Nanotechnology, Drug Delivery, Cellular Biology
 
 ## Teaching Assistantships
