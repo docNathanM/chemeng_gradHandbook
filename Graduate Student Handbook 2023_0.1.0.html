@@ -1,0 +1,605 @@
+<!doctype html>
+<html style='font-size:12px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    pre {
+        page-break-inside: avoid;
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>Graduate Student Handbook 2023_SOURCE_0.1.0</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><p><img src="logo_chemicalVertical.png" style="zoom:25%;" /></p><h1 id='graduate-student-handbook'><span>Graduate Student Handbook</span></h1><p><span>The chemical engineering department offers graduate programs leading to the Master of Science and Doctor of Philosophy degrees in engineering science. These degrees provide the opportunity to tailor a graduate program to the student&#39;s interests. Interdisciplinary research opportunities exist in the broad fields of energy, polymeric materials, nanotechnology, separations, environmental engineering, drug delivery, and more.</span></p><h4 id='department-of-chemical-engineering'><span>Department of Chemical Engineering</span></h4><p><span>University of Mississippi</span>
+<span>134 Anderson Hall</span>
+<span>University of Mississippi</span>
+<span>University, MS 38677</span></p><p><a href='https://chemical.olemiss.edu/' target='_blank' class='url'>https://chemical.olemiss.edu/</a></p><p><span>(662) 915-7023</span></p><h4 id='chemical-engineering-graduate-program-information'><span>Chemical Engineering Graduate Program Information</span></h4><p><a href='https://chemical.olemiss.edu/acad-graduate-programs/' target='_blank' class='url'>https://chemical.olemiss.edu/acad-graduate-programs/</a></p><h4 id='chemical-engineering-graduate-program-coordinator'><span>Chemical Engineering Graduate Program Coordinator</span></h4><p><span>Nathan Murray</span>
+<a href='mailto:nmurray@olemiss.edu' target='_blank' class='url'>nmurray@olemiss.edu</a>
+<span>(662) 915-2168</span>
+<a href='https://olemiss.edu/'><em><span>olemiss.edu</span></em></a></p><h4 id='graduate-school-website'><span>Graduate School Website</span></h4><p><a href='https://umississippigradschool.university-tour.com/' target='_blank' class='url'>https://umississippigradschool.university-tour.com/</a></p><h4 id='catalog-description-and-information'><span>Catalog Description and Information</span></h4><p><a href='https://catalog.olemiss.edu/engineering/chemical-engineering/programs' target='_blank' class='url'>https://catalog.olemiss.edu/engineering/chemical-engineering/programs</a></p><h4 id='information-for-international-students'><span>Information for International Students</span></h4><p><a href='https://international.olemiss.edu/'><span>https://international.olemiss.edu/</span></a></p><h1 id='table-of-contents'><span>Table of Contents</span></h1><p><a href='#program-description'><span>Program Description</span></a></p><p><a href='#coursework-requirements'><span>Coursework Requirements</span></a></p><p><a href='#application-and-admission'><span>Application and Admission</span></a></p><p><a href='#assistantships-fellowships--scholarships'><span>Assistantships, Fellowships, &amp; Scholarships</span></a></p><p><a href='#laboratory-policies-and-procedures'><span>Laboratory Policies and Procedures</span></a></p><p><a href='#phd-candidacy'><span>Ph.D. Candidacy</span></a></p><p><a href='#graduate-student-annual-evaluation'><span>Graduate Student Annual Evaluation</span></a></p><p><a href='#graduate-student-academic-standing'><span>Graduate Student Academic Standing</span></a></p><p><a href='#graduate-student-grievance-procedure'><span>Graduate Student Grievance Procedure</span></a></p><p><a href='#the-end-game-preparing-to-graduate'><span>The End Game: Preparing to Graduate</span></a></p><p><a href='#additional-graduate-student-policies'><span>Additional Graduate Student Policies</span></a></p><p><a href='#campus-map'><span>Campus Map</span></a></p><h1 id='program-description'><span>Program Description</span></h1><p><span>All graduate degree offered by the School of Engineering are degrees in Engineering Science. Both M.S. and Ph.D. are available. This document describes details specific to the Emphasis in Chemical Engineering. Some graduate students may find an interdisciplinary path more suitable to their needs in emphasis areas such as Environmental Engineering, Materials Science and Engineering, and Aeroacoustics. Consult the </span><a href='https://catalog.olemiss.edu/graduate-school'><span>Graduate Program Catalog</span></a><span> for details about these other emphasis areas, or reach out to the graduate program coordinator listed at </span><a href='https://gradschool.olemiss.edu/apply-now/graduate-programs-and-deadlines/'><span>gradschool.olemiss.edu/apply-now/graduate-programs-and-deadlines/</span></a><span>. </span></p><h1 id='coursework-requirements'><span>Coursework Requirements</span></h1><h2 id='master-of-science'><span>Master of Science</span></h2><h3 id='description'><span>Description</span></h3><p><span>A degree of </span><em><span>M.S. in Engineering Science with an Emphasis in Chemical Engineering</span></em><span> prepares graduates to apply chemical engineering science (transport phenomena, thermodynamics, chemical reaction engineering, and applied mathematics. It enables them to independently execute complex projects and pursue successful careers in engineering, medicine, law, professional education, public policy, the military, management, and sales.</span></p><h3 id='course-requirements'><span>Course Requirements</span></h3><p><span>The M.S. in engineering science with an emphasis in chemical engineering requires a minimum of 30 hours of graduate credit. The specific coursework depends on the M.S. option pursued by the student. All M.S. students should be able to demonstrate proficiency in transport phenomena,thermodynamics, and chemical reaction analysis. This is accomplished by completion and approval of the chemical engineering proficiency form prior to graduation.</span></p><h4 id='coursework-option'><span>Coursework Option</span></h4><p><span>All 30 hours come from graded 500-/600- level coursework agreed upon by the student and his or her committee, but must include at least two Ch E 510+ courses (6 credit hours).</span></p><p><span>Students whose undergraduate degree is not in chemical engineering may be required to take additional coursework beyond the 30-hour requirement at the discretion of his or her committee.</span></p><h4 id='nonthesis-option'><span>Nonthesis Option</span></h4><p><span>This option requires at least 27 hours of graded 500-/600-level coursework agreed upon by the student and his or her committee including at least two Ch E 510+ courses (6 credit hours). In addition, students must complete no less than 3 hours of project (Engr 693 and Engr 694) credit.</span></p><h4 id='thesis-option'><span>Thesis Option</span></h4><p><span>Students must take 21 hours of graded 500-/600- level coursework, plus 3 hours of Research Seminar (Ch E 515). The coursework must include no less than 6 hours selected by the student&#39;s committee from any Ch E course 510 or higher. The remaining 15 hours of coursework are agreed upon by the student and his or her committee. All students in the M.S. thesis option must take or have taken at least one course in each of the following topics: reactors design, thermodynamics and transport as graduate or undergraduate students. In addition, students must complete no less than 6 hours of thesis (Engr 697) credit.</span></p><h3 id='other-academic-requirements'><span>Other Academic Requirements</span></h3><p><span>Every candidate for a master’s degree must pass a final written or oral examination.</span></p><h2 id='doctor-of-philosophy'><span>Doctor of Philosophy</span></h2><h3 id='description-2'><span>Description</span></h3><p><span>A Ph.D. in engineering science with emphasis in chemical engineering prepares graduates to apply chemical engineering science (transport phenomena, thermodynamics, chemical reaction engineering, and applied mathematics). It enables them to independently execute complex projects and pursue successful careers in engineering, medicine, law, professional education, public policy, the military, management, and sales. It further equips them with the experience to conduct research —generating and disseminating new knowledge.</span></p><h3 id='coursework-requirements-2'><span>Coursework Requirements</span></h3><p><span>The Ph.D. with an emphasis in chemical engineering requires a minimum of 54 hours of graduate credit past the bachelor&#39;s degree. No specific courses are required beyond those specified for the M.S. thesis option. The remainder of the coursework is agreed upon by the student and his or her committee, 18 hours of which must be dissertation (Engr 797) credit. Students whose undergraduate degree is not in chemical engineering may need to take additional courses to satisfy prerequisites.</span></p><h3 id='other-academic-requirements-2'><span>Other Academic Requirements</span></h3><p><span>Students in the Ph.D. track must achieve a GPA of 3.25 or higher on 12 credit hours selected by the committee from Engr 665, Engr 669 or any Ch E 500-/600-level course. Selection must be done by the end of the first semester. To be admitted to candidacy, the student must successfully complete the preselected courses and pass a &quot;qualifying examination.&quot; To qualify for Ph.D. candidacy, students must write and defend an original research proposal (ORP). More information about the ORP can be found in the </span><a href='#phd-candidacy'><span>Ph.D. Candidacy</span></a><span> section. Those who successfully complete the ORP will be considered Ph.D. candidates. Following the ORP, candidates must then complete a dissertation prospectus and successfully defend their dissertation.</span></p><h1 id='application-and-admission'><span>Application and Admission</span></h1><p><a href='https://gradschool.olemiss.edu/apply-now/'><span>APPLY NOW</span></a><span> Prospective students should apply through the Graduate School&#39;s online portal. Applicants will be ask to select their desired emphasis area during the application process. For degrees in Chemical Engineering, applicants should select the Chemical Engineering emphasis area.</span></p><p><span>Applications for Fall entry are due April 1. Applications for Spring entry are due October 1.</span></p><p><span>APPLICATION FEE: This application fee is </span><strong><span>required</span></strong><span>.</span></p><h2 id='undergraduate-preparation'><span>Undergraduate Preparation</span></h2><p><span>Students admitted to the graduate programs in chemical engineering usually have undergraduate degrees in chemical engineering or a closely related field. For students with undergraduate degrees in the physical sciences (chemistry, physics, etc.), the admissions review process looks for strong performance in thermo-fluids, mathematics, physics, and chemistry. In some cases, the reveiw committee may recommend the applicant complete several undergraduate courses to make up for deficiencies in certain areas before full admission. Prospective students in this situation may be accepted as qualifying students and should contact the Department to work out an individualized curriculum.</span></p><h2 id='admission-requirements'><span>Admission Requirements</span></h2><ul><li><p><span>MINIMUM QUALIFICATIONS: A successful applicant will have a Batchelor degree in Chemical Engineering, Chemistry, Physics, or a closely related STEM field.</span></p></li><li><p><span>RESUME </span><strong><span>REQUIRED</span></strong><span>: The applicant must provide a CV or resume, including contact information of at least two professional references.</span></p></li><li><p><span>INTEREST STATEMENT </span><strong><span>REQUIRED</span></strong><span>: The application </span><strong><span>must provide a written statement of research interests and future goals</span></strong><span>. These are reviewed with a keen interest in a student’s research plan and prior academic preparation.</span></p></li><li><p><span>TRANSCRIPT </span><strong><span>REQUIRED</span></strong><span>: Applicants may submit unofficial transcripts for review by the committee. If admission is granted, the Graduate School will require official transcripts prior to enrollment.</span></p></li><li><p><span>GPA: Successful applicants typically have above 3.0 GPA on a 4.0 scale (US Academic), but all applications that meet the above minimum qualifications will be reviewed.</span></p></li><li><p><span>GRE: The GRE is </span><strong><span>not required</span></strong><span>. You are welcome to submit your GRE; however, the review committee will not base admission decisions on the GRE.</span></p></li><li><p><span>ENGLISH LANGUAGE PROFICIENCY (for international students): </span><a href='https://international.olemiss.edu/' target='_blank' class='url'>https://international.olemiss.edu/</a><span> </span><a href='https://international.olemiss.edu/english-language-proficiency-test-exemption-list/' target='_blank' class='url'>https://international.olemiss.edu/english-language-proficiency-test-exemption-list/</a><span>.</span></p></li></ul><p><span>Applications will be reviewed by a faculty committee to assess the required application materials, the student’s academic preparation, and alignment of research interests with department research priorities.</span></p><h1 id='assistantships-fellowships--scholarships'><span>Assistantships, Fellowships, &amp; Scholarships</span></h1><p><span>All graduate students admitted to the program will be considered for financial support contingent upon funding availability. Continued financial support is dependent upon funding availability and demonstrated performance.</span></p><p><span>Application for a graduate assistantship/instructorship should be made directly to the academic department in which the applicant will pursue a degree. The graduate school offers general information about assistantships at </span><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=Graduate%20Assistantships%20or%20Instructorships'><span>gradschool.olemiss.edu/prospective-students/financial-aid-information/</span></a><span>. Funding for assistantships is dependent on departmental and/or research funds availability.</span></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=Graduate%20Assistantships%20or%20Instructorships'><span>Graduate School Assistantships Details</span></a></p><h2 id='research-assistantships'><span>Research Assistantships</span></h2><p><span>Students who are offered and accept a research assistantship (RA) position must work as a RA each semester with which they receive support. The RA position will consist of no more than 25 hours of assisting a faculty instructor on a funded research project. This research project may or may not be the primary doctoral research project in which a student is assessed for candidacy or degree completion.</span></p><p><span>Prospective students should directly contact the faculty member whose focus area best matches the student&#39;s interests. Contact information is at </span><a href='https://chemical.olemiss.edu/about/faculty_staff.html' target='_blank' class='url'>https://chemical.olemiss.edu/about/faculty_staff.html</a><span>.  Research focus areas are listed below:</span></p><ul><li><p><span>Dr. Lopez: Membranes, Ionic Liquid Composite Materials, Molecular Transport</span></p></li><li><p><span>Dr. Murray: Fluid/Acoustic Interactions, Gas-Solid Two-Phase Flows, Combustion/Turbulence Dynamics</span></p></li><li><p><span>Dr. Nouranian: Multi-Functional Nanocomposites, Interfacial Science, Graphene</span></p></li><li><p><span>Dr. Prager: Coatings, Interfacial Sciences, Soil Remediation</span></p></li><li><p><span>Dr. Reinemann: Biophysics, Cytoskeleton Mechanics, Microscopy</span></p></li><li><p><span>Dr. Smith: Polymers, Biomaterials</span></p></li><li><p><span>Dr. Villacorta: Functional Nano-Composites, Advanced Material Processing</span></p></li><li><p><span>Dr. Werfel: Cancer Nanotechnology, Drug Delivery, Cellular Biology</span></p></li></ul><h2 id='teaching-assistantships'><span>Teaching Assistantships</span></h2><p><span>Students who are offered and accept a teaching assistantship (TA) position must work as a TA each semester with which they receive support. The TA position will consist of no more than 25 hours of assisting a faculty instructor on a course in the department. Duties can include but are not limited to: preparing and delivering lectures to undergraduate students, maintaining a course website, grading course assignments, providing feedback to students on coursework, holding office hours to assist students, proctoring course exams. In addition to receiving a TA stipend, recipients of a TA will also be extended a graduate tuition waiver.</span></p><p><span>Prospective students seeking teaching assistantships should indicate their interest as part of their written </span><em><span>Statement of Research Interests and Future Goals</span></em><span>. The Statement is required and must be uploaded with the student&#39;s application materials.</span></p><h2 id='externally-funded-fellowships'><span>Externally Funded Fellowships</span></h2><p><span>Graduate students can also apply for external grants, awards and fellowships. These funds can be obtained from national, state and local organizations, foundations and agencies.</span></p><p><a href='https://www.pathwaystoscience.org/grad.aspx'><span>pathwaystoscience.org</span></a><span> provides information on numerous graduate fellowship opportunities. Graduate faculty may provide assistance to help a graduate students apply for such opportunities. If these opportunities are of interest to you, open a discussion directly with a research faculty in the department with, &quot;I&#39;m interested in attending OleMiss and I am applying for the [fill in fellowship opportunity name] fellowship. Would you be willing to provide support for my application?&quot;</span></p><h2 id='graduate-school-scholarship-opportunities'><span>Graduate School Scholarship Opportunities</span></h2><p><span>The Graduate School administers graduate recruiting fellowships and scholarships (including for academic excellence and excellence in inclusivity), dissertation fellowships and Summer Graduate Research assistantships.</span></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=click%20HERE.-,Elite%20Scholars%20Program,-Updated%201/30'><span>Elite Scholars Program</span></a></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=at%20this%20time.-,Dissertation%20Fellowship%20Program,-This%20non%2Dservice'><span>Dissertation Fellowship Program</span></a></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=Recommendation%20Form.docx-,Advancing%20STEM%20Scholarship,-The%20Advancing%20STEM'><span>Advancing STEM Scholarships</span></a></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=University%20of%20Mississippi%20Recruiting%20Fellowship%20and%20Scholarship%20Program'><span>University of Mississippi Recruiting Fellowship and Scholarship Program</span></a></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/#:~:text=at%20this%20time.-,Summer%20Graduate%20Research%20Assistantship%20Program,-The%20Summer%20Graduate'><span>Summer Graduate Research Assistantship Program</span></a></p><h2 id='graduate-student-health-insurance'><span>Graduate Student Health Insurance</span></h2><p><span>Graduate assistants with appointments of 1/4 time or higher are </span><strong><span>required</span></strong><span> to participate in a health insurance program.</span><span>*</span><span>  Enrollment and payroll deduction of premiums will be automatic upon appointment for each fall and spring term. Premiums will be subsidized by the university.</span></p><p><a href='https://gradschool.olemiss.edu/current-students/student-health-insurance/'><span>Graduate Student Health Insurance Information</span></a></p><p><em><span>*</span><span>Graduate assistants may request a waiver from participation in the above-sponsored group plan </span><strong><span>if</span></strong><span> they already have comparable health insurance.</span></em></p><h1 id='laboratory-policies-and-procedures'><span>Laboratory Policies and Procedures</span></h1><h2 id='general-laboratory-rules'><span>General Laboratory Rules</span></h2><ol start='' ><li><p><span>The door to the laboratory must be kept closed at all times. In addition, the entrance must be adjusted such that a key is required to enter at all times.</span></p></li><li><p><span>Safety glasses are required within the laboratory at all times. If wearing contacts, a small dot must be placed on the side of your laboratory glasses to notify others in case of an emergency.</span></p></li><li><p><span>Lab gloves must be disposed of before leaving the laboratory. Lab gloves may not be disposed of in a waste container outside of the laboratory.</span></p></li><li><p><span>Long pants and closed-toed shoes are required at all times in the lab. In addition, lab coats are required when handling hazardous chemicals. Lab coats must never be worn outside the lab.</span></p></li><li><p><span>Occupation of the lab is only permissible when conducting experiments or using equipment that is present in the lab. Working on homework, manuscripts, or general socializing shall be done outside of the laboratory.</span></p></li><li><p><span>No food or drink can be brought into any laboratory.</span></p></li><li><p><span>Any instruction given by a faculty member concerning laboratory procedures and safety must be followed.</span></p></li></ol><h2 id='chemical-safety'><span>Chemical Safety </span></h2><ol start='' ><li><p><span>It is strongly recommended that all organic chemicals (and chemicals that exhibit significant fumes) be handled within the fume hoods.</span></p></li><li><p><span>Fume hood sashes shall be lowered when direct access to the fume hoods is not necessary. In addition, the accumulation of glassware and equipment should be avoided. Exceptions include installed structures, equipment, and glassware (i.e. Schlenk lines).</span></p></li><li><p><span>Use of specialty equipment within the laboratory is limited to individuals trained in its use. If training is required, approval is needed from the faculty member who owns and maintains the required equipment. This approval and training is required for unsupervised use of the equipment.</span></p></li><li><p><span>Use of consumables, solvents, and chemicals is limited to only those within the research group where they were purchased. Sharing of supplies is allowed (and encouraged), however, use of supplies must be cleared by each faculty member to which the supplies belong. If supplies or equipment are taken out of the lab for whatever reason, the faculty member who owns the material must be notified and approval received before such adjustments. Any material that is used without permission must be replenished by the faculty advisor using his/her available funds.</span></p></li><li><p><span>All samples and synthesized chemicals must be labeled with the chemical, name of generator, and date generated. These materials must be stored in a safe place, preferably a storage drawer or the appropriate hazardous storage location (e.g. acid, flammables, or corrosive cabinet) with the generator’s name on it.</span></p></li><li><p><span>Each laboratory must contain a folder containing SDS information for all hazardous chemicals stored within that laboratory. This folder must be updated after receipt and storage of a new hazardous chemical in the laboratory. Every semester, faculty and graduate researchers must update SDS information via a chemical audit to ensure proper documentation of all chemicals stored within the laboratory.</span></p></li><li><p><span>A procedural risk assessment is required before any new chemical synthesis or analytical procedure where hazardous chemicals or conditions will be used. A risk assessment is also required before any significant changes to an existing chemical synthesis or analytical procedure. This risk assessment must be approved by the primary faculty advisor before conducting the procedure.</span></p></li></ol><h2 id='laboratory-cleanliness'><span>Laboratory Cleanliness</span></h2><ol start='' ><li><p><span>Benchtops and work areas must be kept clean and clear of clutter such that others may work in the lab when necessary. Accumulation of equipment and materials on the benchtops must be minimized to ensure proper workspace.</span></p></li><li><p><span>All glassware must be cleaned and placed on a drying rack upon completion of its use. Once dry, glassware should be moved to a storage cabinet for safekeeping.</span></p></li><li><p><span>It is the responsibility of undergraduate and graduate researchers to dispose of any non-hazardous waste (i.e. garbage and boxes) that accumulates in the lab. This must be conducted at a minimum every week. A student rotation will be in effect for each lab to ensure every researcher contributes to the general cleanliness of the laboratories.</span></p></li><li><p><span>All hazardous waste must be disposed of in either the aqueous waste, organic waste, or a specialty container with a hazardous label. Specialty waste must then be placed in the satellite accumulation area within the lab which generated the waste. No other area is acceptable for the storage of hazardous waste. Once specialty waste has been collected, laboratory services must be contacted so that they can pick up the waste (every month). This also applies when the aqueous and/or organic waste containers are filled.</span></p></li></ol><h2 id='consequences-for-rule-violations'><span>Consequences for Rule Violations</span></h2><h3 id='minor-violations'><strong><span>Minor Violations</span></strong></h3><p><span>A minor violation consists of any disregard to the above rules which does not create an immediate safety risk to the researcher or other researchers within the laboratory.</span></p><p><strong><span>1st Offense</span></strong><span> – Written infraction form signed by the researcher and primary faculty advisor. Suspension from the lab for the day.</span></p><p><strong><span>2nd Offense</span></strong><span> – Written infraction form signed by the researcher, primary faculty advisor, and departmental chair. Suspension from the lab for the week.</span></p><p><strong><span>3rd Offense</span></strong><span> – Written infraction form signed by the researcher, primary faculty advisor, and departmental chair. A research committee meeting will be called to discuss removal from the program. Suspension from the lab for 2 weeks.</span></p><p><strong><span>Subsequent Offense</span></strong><span> – Removal from the departmental program</span></p><h3 id='major-violations'><strong><span>Major Violations</span></strong></h3><p><span>A major violation consists of any disregard to the above rules which creates an immediate safety risk to the researcher or other researchers within the laboratory.</span></p><p><strong><span>1st Offense</span></strong><span> – Written infraction signed by the researcher, primary faculty advisor, departmental chair. The research committee will be notified via email of the violation. Suspension from the lab for 2 weeks.</span></p><p><strong><span>2nd Offense</span></strong><span> – Removal from the departmental program.</span></p><h1 id='phd-candidacy'><span>Ph.D. Candidacy</span></h1><h2 id='original-research-proposal-orp-guidelines'><span>ORIGINAL RESEARCH PROPOSAL (ORP) GUIDELINES</span></h2><p><span>To become a Ph.D. candidate in Engineering Science with an Emphasis in Chemical Engineering, graduate students must pass a qualifying exam. This requirement is fulfilled by writing and defending an original research proposal (ORP). The ORP serves two purposes: to help students learn how to write a proposal and to evaluate their ability to conceive an original research project while demonstrating mastery of the required academic material.</span></p><p><span>General guidelines are provided for students to follow in order to successfully complete the ORP. These guidelines are designed to help students develop a strong proposal that meets the necessary requirements. After completing the ORP, students will then proceed to the dissertation prospectus and ultimately to the dissertation itself.</span></p><h3 id='objectives'><span>Objectives</span></h3><p><span>To successfully pass the ORP, students must demonstrate the ability to do the following:</span></p><ul><li><p><span>State a research problem taking into consideration existing literature;</span></p></li><li><p><span>Write a hypothesis and/or goals related to the research problem;</span></p></li><li><p><span>Describe the intellectual merit of the proposed research;</span></p></li><li><p><span>Develop a research plan to solve or address the problem;</span></p></li><li><p><span>Account for resource and time requirements necessary to achieve the proposed research goals;</span></p></li><li><p><span>Contextualize the broader impacts of the proposed research; and</span></p></li><li><p><span>Communicate effectively their proposed research in a written and verbal form.</span></p></li></ul><h3 id='examination-timeline'><span>Examination Timeline</span></h3><ol start='' ><li><p><span>Before starting the ORP, a student must have satisfactorily completed: (1) all core course requirements with an average GPA of 3.25 or higher; (2) a minimum of three credit hours of seminar; and (3) at least three full academic semesters after admission into the graduate program in the Department of Chemical Engineering. Per Graduate School regulations, the student must also have a cumulative graduate GPA of 3.0 or higher and must not have an outstanding I grade.</span></p></li><li><p><span>Once all of the above conditions have been met, the student and her/his advisor must select the evaluation committee for the ORP. It must include at least one full member of the graduate faculty (i.e. Associate or Full Professor).</span></p></li><li><p><span>The student must submit the ORP topic to the evaluation committee by email at least 3 months before submitting the written document. It can be related to their field of research, </span><em><span>but not provided by any member of the faculty</span></em><span>. The committee must approve or reject the topic within one week after submission. If the topic is rejected, the student must provide a new topic within two weeks after the original decision was made.</span></p></li><li><p><span>The written document must be submitted to the evaluation committee at least two weeks before the oral defense. The document must adhere to the National Science Foundation (NSF) guidelines described later on this document.</span></p></li><li><p><span>Immediately after the oral defense, the committee will deliberate and assign a pass, conditional pass, or fail grade.</span></p><ul><li><p><span>If the student receives a conditional pass, he/she will have two weeks to correct the ORP and resubmit it.</span></p></li><li><p><span>If the student fails, she/he must resubmit the written ORP on the same topic no earlier than three months after the original defense. The student can modify the general idea, but within the topic that was already approved by the committee.</span></p></li></ul></li><li><p><span>If a student fails twice, he/she cannot be admitted to candidacy.</span></p></li></ol><h3 id='written-orp-guidelines'><span>Written ORP Guidelines</span></h3><p><span>The following guidelines were taken in part from those used by the NSF for writing proposals and should be used to assist students in preparing research proposals for the Ph.D. candidacy examination. Students are encouraged to examine the latest version of the </span><a href='https://www.nsf.gov/publications/pub_summ.jsp?ods_key=pappg'><strong><span>National Science Foundation Proposal and Award Policies and Procedures Guide (PAPPG)</span></strong></a><span> available online.</span></p><h4 id='proposal-contents'><span>Proposal Contents</span></h4><h5 id='project-summary'><span>Project Summary</span></h5><p><span>The proposal must contain a summary of the proposed activity suitable for publication on the NSF website, not more than one page in length. It should not be an abstract of the proposal, but rather a self-contained description of the activity that would result if the proposal was funded. The summary should be written in the third person and must address in separate statements (within the one-page summary):</span></p><ul><li><p><span>an overview including a description of the activity that would result if the proposal was funded and a statement of objectives and methods to be employed;</span></p></li><li><p><span>the intellectual merit of the proposed activity, describing its potential to advance knowledge; and</span></p></li><li><p><span>the broader impacts resulting from the proposed activity, which should describe the potential to benefit society and contribute to the achievement of specific, desired societal outcomes.</span></p></li></ul><p><span>It should be informative to chemical engineers and understandable to a scientifically literate lay reader.</span></p><h5 id='table-of-contents-2'><span>Table of Contents</span></h5><p><span>A Table of Contents must be included. The table of contents is not included in the page limitations of the proposal.</span></p><h5 id='project-description'><span>Project Description</span></h5><ol start='' ><li><p><span>Content</span></p></li></ol><p><span>The Project Description should provide a clear statement of the work to be undertaken and must include: objectives for the period of the proposed work and expected significance; relation to longer-term goals of the proposed project; and relation to the present state of knowledge in the field, to work in progress elsewhere.</span></p><p><span>The Project Description should outline the general plan of work, including the broad design of activities to be undertaken, and, where appropriate, provide a clear description of experimental methods and procedures. It must describe as an integral part of the narrative, the broader impacts resulting from the proposed activities, addressing one or more of the following as appropriate for the project: how the project will integrate research and education by advancing discovery and understanding; how the results of the project will be disseminated broadly to enhance scientific and technological understanding; and potential benefits of the proposed activity to society at large.</span></p><ol start='2' ><li><p><span>Page Limitations</span></p></li></ol><p><span>Brevity assists the faculty in dealing effectively with proposals. Therefore, the Project Description must be single-spaced, at least 10 pages, and may not exceed 15 pages. Visual materials, including charts, graphs, maps, photographs, and other pictorial presentations are included in the page limitation. Students are cautioned that the project description must be self-contained and that URLs that provide information related to the proposal should not be used because 1) the information could circumvent page limitations, 2) the examiners are under no obligation to view the sites, and 3) the sites could be altered or abolished between the time of submission and the time of review. Conformance to the page limitation will be strictly enforced. </span><em><strong><span>Proposals that do not meet this page limitation will be returned</span></strong></em><span> with the expectation that the document will be re-submitted in the correct format more than </span><em><strong><span>two weeks before</span></strong></em><span> the proposal defense date.</span></p><h5 id='references-cited'><span>References Cited</span></h5><p><span>Reference information is required to support the information presented in the body of the proposal. Each reference must include the names of all authors (in the same sequence in which they appear in the publication), the article and journal title, book title, volume number, page numbers, and year of publication. Students must be especially careful to follow accepted scholarly practices in providing citations for source materials relied upon when preparing any section of the proposal. While there is no established page limitation for the references, this section must include bibliographic citations only and must not be used to provide parenthetical information outside of the 15-page project description.</span></p><h5 id='budget'><span>Budget</span></h5><p><span>A budget for the proposed project must be included. The budget should follow the format laid out by the Office of Research and Sponsored Programs (ORSP) of the University of Mississippi for an NSF proposal. In general, all proposals must include an itemized budget that is reasonable for the completion of the project. Budgets should be limited to </span><span>$</span><span>100,000 per year, over a two-year period. Reasonable equipment charges may be requested. Based on the budget limit, reasonable equipment costs may typically be between </span><span>$</span><span>5,000 and </span><span>$</span><span>10,000; however, higher requests can also be acceptable. </span><em><strong><span>All equipment costs must be adequately justified.</span></strong></em><span> Indirect costs, fringe rates, and tuition remission costs should match those used by the University of Mississippi; these can be found on the UM ORSP website.</span></p><h4 id='proposal-formatting'><span>Proposal Formatting</span></h4><h5 id='proposal-pagination-instructions'><span>Proposal Pagination Instructions</span></h5><p><span>The proposal must be paginated, beginning with the summary as page 1 and ending with the budget as the last page.</span></p><h5 id='proposal-margin-and-spacing-requirements'><span>Proposal Margin and Spacing Requirements</span></h5><p><span>The proposal must be clear, readily legible, and conform to the following requirements:</span></p><ol start='' ><li><p><span>Use of only the approved typefaces identified below, a black font color, and font size of 12 points or larger must be used:</span></p><ul><li><p><span>For Windows users: Arial, Helvetica, Palatino Linotype, Georgia, or Times New Roman</span></p></li><li><p><span>For Macintosh users: Arial, Helvetica, Palatino, Georgia, or Times New Roman</span></p></li></ul></li></ol><p><span>A Symbol font may be used to insert Greek letters or special characters, however, the font size requirement still applies.</span></p><ol start='2' ><li><p><span>Text must be single space.</span></p></li><li><p><span>Margins, in all directions, must be at least an inch.</span></p></li></ol><h5 id='page-formatting'><span>Page Formatting</span></h5><p><span>The proposer must use only a standard, single-column format for the text. Avoid using a two-column format since it can cause difficulties when reviewing the document.</span></p><p><span>The guidelines specified above establish the minimum type size requirements; however, PIs are advised that readability is of paramount importance and should take precedence in the selection of an appropriate font for use in the proposal. Small type size makes it difficult for reviewers to read the proposal; consequently, the use of small type not in compliance with the above guidelines may be grounds for the return of the proposal without review.</span></p><h4 id='constraints-and-suggestions'><span>Constraints and Suggestions</span></h4><p><span>As in any proposal for which you are asking someone to put up real money, the basic idea must be convincing; it must be novel, creative, interesting, and must show potential for success. The proposal should address a fundamental scientific question. </span><em><strong><span>The topic can be</span></strong></em><span> </span><em><strong><span>related to the student&#39;s field of research, but not provided by any faculty and approved by the evaluation committee</span></strong><span>.</span></em><span> Students are not allowed to receive any substantial help from their research advisor(s). However, students ask questions to other members of the faculty, including committee members, to assist with general questions related to the ORP. The following comments should also help develop the proposal.</span></p><ol start='' ><li><p><em><span>Getting ready for ORP</span></em></p></li></ol><ul><li><p><span>It is highly recommended that you think about the topic well ahead of time and read the available literature thoroughly before submitting a topic to the committee. You should start planning your ORP approximately 3 months before submitting the topic. Remember that reading papers should be done routinely while pursuing a Ph.D.</span></p></li><li><p><span>The three months between submitting the topic and the written ORP is a minimum recommended amount of time a student should spend writing the document. It is recommended that students spend between 3 and 6 months developing the ORP, from the initial conception of the idea to submitting the written document.</span></p></li><li><p><span>It is recommended that you start by thinking about the “big picture” and then “fill in” the details. A good proposal starts with well-defined goals and objectives.</span></p></li><li><p><span>Many reviewers consider that a good proposal is driven by a strong hypothesis. This hypothesis should have a sound scientific foundation based on current literature.</span></p></li><li><p><span>Do not present an idea that is only an incremental modification of an existing concept, method, or idea. An excellent idea can help make up for poor implementation or missing components, but a poor idea cannot be saved by fancy footwork.</span></p></li><li><p><span>Your ideas must be defensible. Ask yourself, a) Does this make sense? b) Has anyone done this before? c) Does anyone </span><strong><span>care</span></strong><span> if I do this or not? d) Why is it important?</span></p></li></ul><ol start='2' ><li><p><em><span>Writing your ORP</span></em></p></li></ol><ul><li><p><span>Make sure the narrative of the proposal flows smoothly. A document that is well organized and easy to read is more likely to be successful.</span></p></li><li><p><span>Break up long sentences and paragraphs; short sentences are usually easier to read.</span></p></li><li><p><span>Avoid redundant words, phrases, or sentences. However, it is desirable to emphasize the main ideas of the proposal in several locations of the narrative. </span><em><strong><span>Do not be afraid to use bold and italicized sentences that describe the most significant aspects of your proposal.</span></strong></em></p></li><li><p><span>You should never submit the first complete draft of the ORP. Read your draft multiple times, and edit it. Spend a couple of days without thinking about it, then read it again and edit it.</span></p></li><li><p><span>Remember that you are still required to work on your research and courses while developing the ORP.</span></p></li></ul><ol start='3' ><li><p><em><span>Defending the ORP</span></em></p></li></ol><ul><li><p><span>It is recommended that you plan a 30 min presentation to allow for 30 min of questions and answers.</span></p></li><li><p><span>Number all your slides.</span></p></li><li><p><span>Use plenty of visual aids. It is usually better to have few words in a slide. Make sure ALL text is large enough to be seen from the back of the room; this includes figure legends, axis titles, footnotes, etc.</span></p></li><li><p><span>Make sure that you follow best practices of professionalism and visual presentation.</span></p></li><li><p><span>Practice your defense multiple times. Pay close attention to the transitions. Make sure it flows well. Your presentation should keep the attention of the evaluation committee while effectively communicating your proposed research.</span></p></li><li><p><span>Know the background science. This is also an examination of your basic knowledge and understanding of chemical engineering principles.</span></p></li></ul><h1 id='graduate-student-annual-evaluation'><span>Graduate Student Annual Evaluation</span></h1><p><span>Graduate students shall meet with their advisor and/or research director for evaluation at least once each year. Ideally, the student and advisor will meet regularly for discussion of research objectives, outcomes, and progress. The annual evaluate serves as a means of providing constructive feedback to the student on the progress being made so that the expectations of the student are clearly articulated through the graduate education process.</span></p><p><span>Forms for the annual evaluation are available ... </span><em><span>These are saved as individual DOCX templates that will be posted to Box and made available on the web. Once published, the links will appear here for access.</span></em></p><h1 id='graduate-student-academic-standing'><span>Graduate Student Academic Standing</span></h1><p><span>There are four different categories of academic standing based on a student’s academic performance: good standing, academic probation, academic suspension, or academic dismissal. Probation, suspension, and dismissal become effective at the end of the semester in which the student fails to attain an adequate GPA. Although the student will usually receive official notification of such action, notification is not a prerequisite to the student’s being placed on probation, suspended, or dismissed. </span><strong><span>It is the student’s responsibility to ascertain his or her academic status before the beginning of each semester.</span></strong></p><h2 id='good-standing'><strong><span>Good Standing</span></strong></h2><p><span>A student will be in good standing and remain in good standing when his or her cumulative GPA is 3.00 or higher. Further, a student must be making adequate degree progress as indicated by his or her annual student evaluation to remain in good standing.</span></p><h2 id='academic-probation'><span>Academic Probation</span></h2><p><span>Students enrolled in a graduate program (master’s or doctoral) will be placed on academic probation at the end of the semester when their cumulative GPA falls below 3.0. Failure to raise their cumulative GPA to 3.0 in the following semester of enrollment will result in disqualification.</span></p><p><span>Graduate students may also be placed on academic probation if he/she receives an unsatisfactory annual evaluation from their primary advisor. This probationary condition must be reviewed and approved by the graduate student’s committee and made official via a formal letter to the department head or graduate program coordinator indicating the probationary status. The letter must indicate necessary steps for the graduate student to complete within the next semester to achieve good standing and avoid disqualification.</span></p><p><span>Students on probation will be dismissed if, at the end of their next semester of enrollment, their cumulative GPA remains below 3.0 or they fail to meet performance conditions set by their committee after receiving an unsatisfactory annual evaluation. Graduate students who have been dismissed are ineligible for teaching or research assistantships. Graduate students who have been dismissed are ineligible for future enrollment in the department.</span></p><h2 id='graduate-student-suspension'><span>Graduate Student Suspension</span></h2><p><span>Graduate students within our department do not undergo a suspension period. Any subsequent repercussions for poor performance during a probationary period will result in student dismissal from the program.</span></p><h2 id='graduate-student-dismissal-from-program'><span>Graduate Student Dismissal from Program</span></h2><p><span>Students within the department may be dismissed from the department and graduate program for one of several reasons including</span></p><ul><li><p><span>Failure to make adequate academic progress during a probationary period</span></p></li><li><p><span>Repeated laboratory safety policy violations</span></p></li><li><p><span>Failure to complete doctoral candidacy examination after two attempts</span></p></li><li><p><span>Failure to complete doctoral dissertation defense after two attempts</span></p></li><li><p><span>Other student conduct violations as reviewed by the graduate student committee</span></p></li></ul><p><span>Graduate students who are dismissed from the program will be notified by letter from the Graduate Program Coordinator indicating the date of dismissal. Any graduate stipend from a graduate assistantship or fellowship provided by the University will be withheld beyond the dismissal date. Tuition charges may result from student dismissal and are the sole responsibility of the graduate student. A dismissed graduate student will be unable to enroll in the department or School of Engineering for any subsequent semester.</span></p><h1 id='graduate-student-grievance-procedure'><span>Graduate Student Grievance Procedure</span></h1><p><span>Graduate students have the right to file grievances about the conduct or behavior performed on the part of the institution or by any of its agents. The </span><a href='https://umatter.olemiss.edu/'><span>UMatter: Student Support &amp; Advocacy Office</span></a><span> maintains the process for the review of, response, and attempted resolution of academic, non-academic, or general complaints for students. The grievance process encourages the use of an informal resolution process to resolve complaints. It also provides a formal resolution process and protocol that may be utilized by students when a grievance is not resolved through the informal process.</span></p><h1 id='the-end-game-preparing-to-graduate'><span>The End Game: Preparing to Graduate</span></h1><p><span>The Graduate School provides an excellent </span><a href='https://gradschool.olemiss.edu/current-students/the-end-game-preparing-to-graduate/'><span>Step by Step Checklist</span></a><span> that details all the </span><em><span>required</span></em><span> steps to graduate. The graduation requirements are enforced by the Graduate School and </span><em><span>not</span></em><span> by the Department of Chemical Engineering nor the School of Engineering. Therefore, the Graduate School deadlines are firm. </span><strong><span>No exceptions are made to the deadlines</span></strong><span>, so plan accordingly. Do not expect your advisor or graduate program coordinator to keep up with these details on your behalf.</span></p><h1 id='additional-graduate-student-policies'><span>Additional Graduate Student Policies</span></h1><p><span>It is strongly recommended that any prospective or current graduate student within our program review the following policies on the University website.</span></p><p><a href='https://gradschool.olemiss.edu/current-students/student-health-insurance/'><span>Graduate Student Health Insurance</span></a></p><p><a href='https://gradschool.olemiss.edu/prospective-students/financial-aid-information/'><span>Graduate Student Financial Aid</span></a></p><p><a href='https://policies.olemiss.edu/ShowDetails.jsp?istatPara=1&amp;policyObjidPara=12684669'><span>Leave of Absence Policy</span></a></p><p><a href='https://olemiss.app.box.com/s/v5muimjeaaiua5x2kd24fzj4u4inwqcs'><span>Parental Leave Policy</span></a></p><p><a href='https://gradschool.olemiss.edu/current-students/forms-and-manuals-library/'><span>Graduate Student Forms Library</span></a></p><h1 id='campus-map'><span>Campus Map</span></h1><p><span>An illustrated and interactive </span><a href='https://map.olemiss.edu/'><span>Campus Map</span></a><span> is available to help orient new students to the location of buildings and services around campus. Buildings of interest include</span></p><ul><li><p><span>Brevard Hall, Engineering Dean’s Office</span></p></li><li><p><span>Graduate House, Office of the Graduate School</span></p></li><li><p><span>Martindale, Student Services, the Office of Global Engagement and International Programs</span></p></li><li><p><span>Anderson Hall, Department of Chemical Engineering</span></p></li><li><p><span>Johnson Commons, </span><a href='https://idcenter.olemiss.edu/'><span>ID Center</span></a></p></li></ul></div></div>
+</body>
+</html>
